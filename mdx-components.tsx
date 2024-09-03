@@ -1,21 +1,7 @@
 import { MDXComponents } from 'mdx/types';
-import { HTMLAttributes } from 'react';
-
-type ZoomImageProps = {
-  alt: string;
-};
-
-export function ZoomImage(props: ZoomImageProps) {
-  return <div>www</div>;
-}
-
-function CustomCodeSandBox(props: HTMLAttributes<HTMLDivElement>) {
-  return <div {...props} />;
-}
 
 const components = {
-  // ZoomImage,
-  CustomCodeSandBox,
+  h1: (props) => <h1 style={{ color: 'tomato' }} {...props} />,
 } satisfies MDXComponents;
 
 declare global {

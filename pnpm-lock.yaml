@@ -8,9 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@mdx-js/react':
+        specifier: latest
+        version: 3.0.1(@types/react@18.2.8)(react@18.2.0)
       '@next/mdx':
         specifier: latest
-        version: 14.2.4
+        version: 14.2.4(@mdx-js/react@3.0.1(@types/react@18.2.8)(react@18.2.0))
       '@types/mdx':
         specifier: 2.0.3
         version: 2.0.3
@@ -37,6 +40,12 @@ importers:
         version: 5.5.2
 
 packages:
+
+  '@mdx-js/react@3.0.1':
+    resolution: {integrity: sha512-9ZrPIU4MGf6et1m1ov3zKf+q9+deetI51zprKB1D/z3NOb+rUxxtEl3mCjW5wTGh6VhRdwPueh1oRzi6ezkA8A==}
+    peerDependencies:
+      '@types/react': '>=16'
+      react: '>=16'
 
   '@next/env@14.2.4':
     resolution: {integrity: sha512-3EtkY5VDkuV2+lNmKlbkibIJxcO4oIHEhBWne6PaAp+76J9KoSsGvNikp6ivzAT8dhhBMYrm6op2pS1ApG0Hzg==}
@@ -230,11 +239,19 @@ packages:
 
 snapshots:
 
+  '@mdx-js/react@3.0.1(@types/react@18.2.8)(react@18.2.0)':
+    dependencies:
+      '@types/mdx': 2.0.3
+      '@types/react': 18.2.8
+      react: 18.2.0
+
   '@next/env@14.2.4': {}
 
-  '@next/mdx@14.2.4':
+  '@next/mdx@14.2.4(@mdx-js/react@3.0.1(@types/react@18.2.8)(react@18.2.0))':
     dependencies:
       source-map: 0.7.4
+    optionalDependencies:
+      '@mdx-js/react': 3.0.1(@types/react@18.2.8)(react@18.2.0)
 
   '@next/swc-darwin-arm64@14.2.4':
     optional: true

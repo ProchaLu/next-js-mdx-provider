@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@mdx-js/react": "latest",
     "@next/mdx": "latest",
     "@types/mdx": "2.0.3",
     "@types/node": "18.11.18",
